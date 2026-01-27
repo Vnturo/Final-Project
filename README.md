@@ -18,3 +18,22 @@ npm install
 cd client
 npm install
 cd ..
+```
+### 3. Start the Application
+```bash
+npm run dev
+```
+
+Backend: http://localhost:5000
+
+Frontend: http://localhost:5173
+
+# 🛠 Tech Stack
+
+Frontend: React + Tailwind CSS
+
+Backend: Node.js + Express
+
+Database: MySQL
+
+Algorithms: Apriori (Analytics), Linear Time-Decay (Pricing)
