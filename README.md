@@ -13,6 +13,7 @@ A Full-Stack prototype investigating "Time-Decay Pricing" to solve student indif
 ```bash
 # Install backend tools
 npm install
+npm install cors
 
 # Install frontend tools
 cd client
