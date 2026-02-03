@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ShieldCheck, Home } from 'lucide-react';
+import { ShieldCheck, Home, ShoppingBag } from 'lucide-react';
 
 export default function SuccessPage() {
   return (
@@ -12,12 +12,21 @@ export default function SuccessPage() {
       <p className="text-green-100 text-lg mb-8 max-w-md">
           You successfully snagged the deal! A receipt has been sent to your email.
       </p>
-      <Link 
-          to="/"
-          className="bg-white text-green-600 px-8 py-3 rounded-xl font-bold hover:bg-green-50 transition shadow-lg flex items-center gap-2"
-      >
-          <Home size={18} /> Back Home
-      </Link>
+      
+      <div className="flex gap-4">
+          <Link 
+              to="/"
+              className="bg-green-600 border border-green-400 text-white px-6 py-3 rounded-xl font-bold hover:bg-green-700 transition shadow-lg flex items-center gap-2"
+          >
+              <Home size={18} /> Home
+          </Link>
+          <Link 
+              to="/catalog"
+              className="bg-white text-green-600 px-6 py-3 rounded-xl font-bold hover:bg-green-50 transition shadow-lg flex items-center gap-2"
+          >
+              <ShoppingBag size={18} /> Shop More
+          </Link>
+      </div>
     </div>
   );
 }
