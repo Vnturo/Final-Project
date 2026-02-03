@@ -37,7 +37,6 @@ export default function AdminDashboard() {
                 <h3 className="text-gray-400 text-xs uppercase tracking-wider">Total Products</h3>
                 <p className="text-3xl font-bold mt-2">{stockList.length}</p>
             </div>
-            {/* Add more stats here later */}
         </div>
 
         {/* Inventory Table */}
