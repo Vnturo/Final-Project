@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { ArrowLeft, UserPlus, CheckCircle } from 'lucide-react';
 
-const API_URL = "http://localhost:5000/api";
+const API_URL = "/api";
 
 export default function Register() {
   const navigate = useNavigate();

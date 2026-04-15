@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { ShoppingBag, ArrowRight, ShieldCheck, User, LogIn, Lock, LogOut, Package } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 
-const API_URL = "http://localhost:5000/api";
+const API_URL = "/api";
 
 export default function LandingPage() {
   const { user, login, logout } = useAuth(); // Get user state from Context
@@ -36,7 +36,7 @@ export default function LandingPage() {
     }
   };
 
-  // 1. VIEW IF LOGGED IN
+  // VIEW IF LOGGED IN
   if (user) {
     return (
         <div className="min-h-screen flex flex-col items-center justify-center p-6 bg-gradient-to-br from-blue-50 to-indigo-50">
@@ -72,7 +72,7 @@ export default function LandingPage() {
     );
   }
 
-  // 2. VIEW IF LOGIN FORM IS OPEN
+  // VIEW IF LOGIN FORM IS OPEN
   if (showLogin) {
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50 p-4">
@@ -113,7 +113,7 @@ export default function LandingPage() {
       );
   }
 
-  // 3. DEFAULT LANDING VIEW (Logged Out)
+  // DEFAULT LANDING VIEW (Logged Out)
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-6 bg-gradient-to-br from-blue-50 to-indigo-50">
       <div className="max-w-md w-full text-center space-y-8">
