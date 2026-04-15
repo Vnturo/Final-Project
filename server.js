@@ -38,13 +38,13 @@ const PORT = 5000;
 app.use(cors());
 app.use(bodyParser.json());
 
-// REAL DATABASE CONNECTION DETAILS (CHANGE THESE TO YOUR OWN)
+// Backend: server.js
 const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',      
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,     
     password: process.env.DB_PASSWORD,
-    database: 'unideals_db',
-    port: 3306         
+    database: process.env.DB_NAME,
+    port: process.env.DB_PORT
 });
 
 db.connect((err) => {

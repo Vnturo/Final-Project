@@ -8,15 +8,14 @@ import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
 import CheckoutForm from '../components/CheckoutForm';
 
-// Use your Publishable Key here
-const stripePromise = loadStripe('pk_test_51SlcYWCLODUQYR2AfmodBYwR5mUrYsszLmC2zW93TY03UmrGXCqu0kBHQMyUYMECiyebO3RQke4j367RFxPn84ki004gDt1Lr8'); // STRIPE PUBLIC KEY CHANGE TO YOUR OWN
+// Frontend: ProductPage.jsx
+const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
 const API_URL = "/api";
 
 export default function ProductPage() {
   const { token } = useParams(); 
   const navigate = useNavigate();
   const { user } = useAuth();
-  
   const [data, setData] = useState(null);
   const [email, setEmail] = useState('');
   const [timeLeft, setTimeLeft] = useState(0);

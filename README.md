@@ -35,22 +35,29 @@ UniDeals is a platform that generates dynamic, time-decaying discounts for unive
 
 ### 1. Database Setup
 1. Open your preferred MySQL client (e.g. MySQL Workbench).
-2. Locate the `Database.sql` file in the root of the `/backend` folder.
+2. Locate the `Database.sql` file in the root folder.
 3. Copy the contents and execute the script. This will automatically create the `unideals_db` database, all necessary relational tables, and a default Admin account.
 
-### 2. Backend Setup
-1. Open a terminal and navigate to the backend directory: `cd backend`
+### 2. Environment Variables & Stripe Setup
+To make evaluation as frictionless as possible, **you do not need to create a Stripe developer account**. You can use my active Test Keys to evaluate the checkout flow safely. 
+
+Please follow the instructions in the provided `.env.example` file to create your local environment variables. You will need to insert the following keys:
+* **Backend Secret Key:** `sk_test_51SlcYWCLODUQYR2As4FSVU1LPjuhABAaUuuaPHbvp1K0IVDO4Df6aedszvHXFZWTGcbSot6nFWKOhHc8iA4va2ha00MRRpPLUP`
+* **Frontend Public Key:** `pk_test_51SlcYWCLODUQYR2AfmodBYwR5mUrYsszLmC2zW93TY03UmrGXCqu0kBHQMyUYMECiyebO3RQke4j367RFxPn84ki004gDt1Lr8`
+
+### 3. Backend Setup
+1. Open a terminal in the **root directory** (where `server.js` is located).
 2. Install all dependencies: `npm install`
-3. Locate the `.env.example` file and rename it to `.env`.
-4. Open the `.env` file and insert your local MySQL password and a valid Stripe Test Secret Key.
-5. Start the server: `node server.js` 
+3. Ensure your `.env` file is created (as per the `.env.example` instructions) with your local MySQL password and the Stripe Secret Key.
+4. Start the server: `node server.js` 
    *(Note: The server will run on `http://localhost:5000` and will automatically generate an `/uploads` folder for images).*
 
-### 3. Frontend Setup
-1. Open a **new, second terminal** and navigate to the frontend directory: `cd frontend`
+### 4. Frontend Setup
+1. Open a **new, second terminal** and navigate to the client directory: `cd client`
 2. Install all dependencies: `npm install`
-3. Start the Vite React development server: `npm run dev`
-4. Open the provided `localhost` link (usually `http://localhost:5173`) in your browser.
+3. Ensure your `.env` file is created here with the Stripe Public Key.
+4. Start the Vite React development server: `npm run dev`
+5. Open the provided `localhost` link (usually `http://localhost:5173`) in your browser.
 
 ---
 
